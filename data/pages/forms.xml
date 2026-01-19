@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+    <pubDate>Sun, 19 Jan 2026 19:53:00 +0000</pubDate>
+    <title><![CDATA[Forms]]></title>
+    <url><![CDATA[forms]]></url>
+    <meta><![CDATA[]]></meta>
+    <metad><![CDATA[]]></metad>
+    <menu><![CDATA[Forms]]></menu>
+    <menuOrder><![CDATA[3]]></menuOrder>
+    <menuStatus><![CDATA[Y]]></menuStatus>
+    <template><![CDATA[template.php]]></template>
+    <parent><![CDATA[]]></parent>
+    <content><![CDATA[<h2>Forms and Resources</h2>
+
+<p>Forms and resources will be available here soon. Please check back later or contact us if you need specific information.</p>]]></content>
+    <private><![CDATA[]]></private>
+    <author><![CDATA[admin]]></author>
+</item>

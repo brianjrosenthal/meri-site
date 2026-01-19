@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item><pubDate>Thu, 01 Jan 2026 18:27:18 +0000</pubDate><title><![CDATA[Start with a Problem]]></title><url><![CDATA[index]]></url><meta><![CDATA[getsimple ce, easy, content management system]]></meta><metad><![CDATA[]]></metad><menu><![CDATA[Home]]></menu><menuOrder><![CDATA[1]]></menuOrder><menuStatus><![CDATA[Y]]></menuStatus><template><![CDATA[homepage.php]]></template><parent><![CDATA[]]></parent><content><![CDATA[&lt;style type=&quot;text/css&quot;&gt;body {
+	margin: 0;
+	padding: 0;
+	background-image: url(&#039;/data/uploads/earth_horizon_global-south7.png&#039;);
+	background-size: cover;
+	background-position: center top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+div.hero {
+	width: 100vw;
+	margin-left: calc(-50vw + 50%);
+	height: 611px;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90px;
+	position: relative;
+}
+.text-container {
+	height: 334px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+html {
+	scroll-behavior: smooth;
+}
+&lt;/style&gt;
+&lt;div class=&quot;hero&quot;&gt;
+	&lt;div class=&quot;text-container&quot;&gt;Start with a&lt;/div&gt;
+
+	&lt;div class=&quot;text-container&quot;&gt;Problem&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Main Cards Section --&gt;
+
+&lt;section class=&quot;cards-section&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;div class=&quot;cards-grid&quot;&gt;
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#health-subcards&quot;&gt;&lt;img alt=&quot;Health&quot; src=&quot;/data/uploads/health_wo_words.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#health-subcards&quot;&gt;Health&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#energy-subcards&quot;&gt;&lt;img alt=&quot;Energy&quot; src=&quot;/data/uploads/energy_wo_words.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#energy-subcards&quot;&gt;Energy&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#society-subcards&quot;&gt;&lt;img alt=&quot;Society&quot; src=&quot;/data/uploads/society_wo_words.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#society-subcards&quot;&gt;Society&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#climate-subcards&quot;&gt;&lt;img alt=&quot;Climate&quot; src=&quot;/data/uploads/climate_wo_words.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card&quot; href=&quot;#climate-subcards&quot;&gt;Climate&lt;/a&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- Health Subcards Section --&gt;
+
+&lt;section class=&quot;cards-section subcards-section&quot; id=&quot;health-subcards&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;h2 class=&quot;section-title&quot;&gt;Health Problems&lt;/h2&gt;
+
+	&lt;div class=&quot;cards-grid&quot;&gt;
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=dementia&quot;&gt;&lt;img alt=&quot;Dementia&quot; src=&quot;/data/uploads/dementia_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=dementia&quot;&gt;Dementia&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=cancer&quot;&gt;&lt;img alt=&quot;Cancer&quot; src=&quot;/data/uploads/cancer_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=cancer&quot;&gt;Cancer&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=cavities&quot;&gt;&lt;img alt=&quot;Cavities&quot; src=&quot;/data/uploads/cavities_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=cavities&quot;&gt;Cavities&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=malaria&quot;&gt;&lt;img alt=&quot;Malaria&quot; src=&quot;/data/uploads/malaria_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=malaria&quot;&gt;Malaria&lt;/a&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- Energy Subcards Section --&gt;
+
+&lt;section class=&quot;cards-section subcards-section&quot; id=&quot;energy-subcards&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;h2 class=&quot;section-title&quot;&gt;Energy Problems&lt;/h2&gt;
+
+	&lt;div class=&quot;cards-grid&quot;&gt;
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=clean-energy&quot;&gt;&lt;img alt=&quot;Clean Energy&quot; src=&quot;/data/uploads/clean_energy_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=clean-energy&quot;&gt;Clean Energy&lt;/a&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- Society Subcards Section --&gt;
+
+&lt;section class=&quot;cards-section subcards-section&quot; id=&quot;society-subcards&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;h2 class=&quot;section-title&quot;&gt;Society Problems&lt;/h2&gt;
+
+	&lt;div class=&quot;cards-grid&quot;&gt;
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=unsafe-drinking-water&quot;&gt;&lt;img alt=&quot;Unsafe Drinking Water&quot; src=&quot;/data/uploads/unsafe_drinking_water_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=unsafe-drinking-water&quot;&gt;Unsafe Drinking Water&lt;/a&gt;&lt;/h3&gt;
+
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=homelessness&quot;&gt;&lt;img alt=&quot;Homelessness&quot; src=&quot;/data/uploads/homelessness_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=homelessness&quot;&gt;Homelessness&lt;/a&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- Climate Subcards Section --&gt;
+
+&lt;section class=&quot;cards-section subcards-section&quot; id=&quot;climate-subcards&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+	&lt;h2 class=&quot;section-title&quot;&gt;Climate Problems&lt;/h2&gt;
+
+	&lt;div class=&quot;cards-grid&quot;&gt;
+		&lt;div class=&quot;card-image&quot;&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=sustainable-farming&quot;&gt;&lt;img alt=&quot;Sustainable Farming&quot; src=&quot;/data/uploads/sustainable_farming_subcard.png&quot; /&gt; &lt;/a&gt;&lt;/div&gt;
+
+		&lt;h3&gt;&lt;a class=&quot;problem-card subcard&quot; href=&quot;index.php?id=sustainable-farming&quot;&gt;Sustainable Farming&lt;/a&gt;&lt;/h3&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+]]></content><private><![CDATA[]]></private><author><![CDATA[lilly]]></author></item>

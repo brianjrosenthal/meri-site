@@ -1,0 +1,180 @@
+/**
+ * CKEditor Content Styles for ResponsiveCE Theme
+ * 
+ * These styles are applied to the content area while editing in the admin.
+ * They help provide a WYSIWYG experience that matches the front-end appearance.
+ */
+
+/* Body/Content Area */
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	padding: 20px;
+	max-width: 100%;
+}
+
+/* Paragraph text size matches front-end */
+p {
+	font-size: 24px;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	margin-top: 1.5rem;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+/* Article figures with captions - float right */
+figure.article_image {
+	float: right;
+	max-width: 400px;
+	width: 40%;
+	margin: 0 0 20px 30px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background: #f5f5f5;
+}
+
+figure.article_image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	border-radius: 0;
+}
+
+figure.article_image figcaption {
+	text-align: center;
+	font-style: italic;
+	font-size: 0.9rem;
+	padding: 10px;
+	margin: 0;
+	background: rgba(0, 0, 0, 0.05);
+	color: #666;
+	line-height: 1.4;
+}
+
+/* Regular article images */
+.article-image {
+	float: right;
+	max-width: 400px;
+	width: 40%;
+	margin: 0 0 20px 30px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+}
+
+/* Lists */
+ul, ol {
+	margin: 1rem 0;
+	padding-left: 2rem;
+}
+
+li {
+	margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+	color: #0066cc;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #0052a3;
+}
+
+/* Definition terms (glossary) */
+.def-term {
+	color: #0066cc;
+	border-bottom: 1px dotted #0066cc;
+	cursor: help;
+}
+
+/* Blockquotes */
+blockquote {
+	margin: 1.5rem 0;
+	padding: 1rem 1.5rem;
+	border-left: 4px solid #0066cc;
+	background: #f5f5f5;
+	font-style: italic;
+}
+
+/* Code */
+code {
+	background: #f5f5f5;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: 'Courier New', monospace;
+	font-size: 0.9em;
+}
+
+pre {
+	background: #f5f5f5;
+	padding: 1rem;
+	border-radius: 4px;
+	overflow-x: auto;
+}
+
+pre code {
+	background: none;
+	padding: 0;
+}
+
+/* Tables */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1rem 0;
+}
+
+th, td {
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+th {
+	background: #f5f5f5;
+	font-weight: 600;
+}
+
+/* Responsive note - editor is fixed width, but this helps when testing */
+@media (max-width: 767px) {
+	figure.article_image,
+	.article-image {
+		float: none;
+		width: 100%;
+		margin: 20px 0;
+	}
+	
+	p {
+		font-size: 20px;
+	}
+}

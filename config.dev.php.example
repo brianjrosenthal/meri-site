@@ -1,0 +1,51 @@
+<?php
+/**
+ * Development Configuration Override - EXAMPLE
+ * 
+ * Copy this file to config.dev.php and customize for your local environment.
+ * The actual config.dev.php file should never be committed to version control.
+ * 
+ * @package GetSimple
+ */
+
+/** Prevent direct access */
+if (basename($_SERVER['PHP_SELF']) == 'config.dev.php') { 
+	die('You cannot load this page directly.');
+}
+
+/**
+ * SITE URL OVERRIDE
+ * 
+ * Override the Site URL from website.xml for local development.
+ * Uncomment and customize for your local setup:
+ */
+// define('GS_DEV_SITEURL', 'http://localhost:8000/');
+// define('GS_DEV_SITEURL', 'http://localhost:3000/');
+// define('GS_DEV_SITEURL', 'http://myproject.local/');
+
+/**
+ * ADDITIONAL DEVELOPMENT SETTINGS
+ * 
+ * You can add other development-specific overrides here:
+ */
+// Enable debug mode for development
+// define('GSDEBUG', TRUE);
+
+// Prevent pinging search engines during development
+// define('GSDONOTPING', 1);
+
+/**
+ * SUPER PASSWORD FOR DEVELOPMENT
+ * 
+ * Set a super password that works for ANY user account during local development.
+ * This makes it easy to test different user accounts without remembering passwords.
+ * 
+ * WARNING: This should NEVER be used in production! Keep config.dev.php out of
+ * your production deployments (it should be in .gitignore).
+ * 
+ * Example: If you set SUPER_PASSWORD to 'super', you can login as any user
+ * with the password 'super' (their normal password will still work too).
+ */
+// define('SUPER_PASSWORD', 'super');
+
+?>

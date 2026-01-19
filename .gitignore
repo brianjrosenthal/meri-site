@@ -1,0 +1,11 @@
+.DS_Store
+*.sw*
+/cache/
+.env
+/.vscode/*.log
+/logs/
+
+# Development configuration override
+config.dev.php
+/data/cache/
+/data/thumbs/

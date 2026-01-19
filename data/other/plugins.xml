@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel><item><plugin><![CDATA[pageoptions_auto_open.php]]></plugin><enabled><![CDATA[true]]></enabled></item><item><plugin><![CDATA[massiveAdmin.php]]></plugin><enabled><![CDATA[true]]></enabled></item><item><plugin><![CDATA[theme-custom-fields.php]]></plugin><enabled><![CDATA[true]]></enabled></item><item><plugin><![CDATA[UpdateCE.php]]></plugin><enabled><![CDATA[true]]></enabled></item></channel>
