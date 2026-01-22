@@ -48,4 +48,29 @@ if (basename($_SERVER['PHP_SELF']) == 'config.dev.php') {
  */
 // define('SUPER_PASSWORD', 'super');
 
+/**
+ * CONTACT FORM EMAIL CONFIGURATION
+ * 
+ * Email address where contact form submissions should be sent
+ */
+define('CONTACT_EMAIL', 'brian.rosenthal@gmail.com');
+
+/**
+ * SMTP CONFIGURATION
+ * 
+ * Configure SMTP settings for sending emails.
+ * For Gmail, you'll need to:
+ * 1. Enable 2-factor authentication on your Google account
+ * 2. Generate an "App Password" at https://myaccount.google.com/apppasswords
+ * 3. Use that app password below (not your regular Gmail password)
+ */
+define('SMTP_ENABLED', true);
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_PORT', 587); // or 465 for SSL
+define('SMTP_SECURE', 'tls'); // 'tls' or 'ssl'
+define('SMTP_USERNAME', 'your-email@gmail.com'); // Your Gmail address
+define('SMTP_PASSWORD', 'your-app-password-here'); // Your Gmail app password
+define('SMTP_FROM_EMAIL', 'your-email@gmail.com'); // From address
+define('SMTP_FROM_NAME', 'Rites of Passage Contact Form'); // From name
+
 ?>
