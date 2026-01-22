@@ -13,9 +13,35 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('a');
+        // Handle submenu toggle on mobile
+        const submenuToggles = navMenu.querySelectorAll('.has-submenu > .submenu-toggle');
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                // Only handle on mobile (screen width <= 768px)
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const parentLi = this.closest('.has-submenu');
+                    parentLi.classList.toggle('submenu-open');
+                }
+            });
+        });
+        
+        // Close menu when clicking on a submenu link (not parent link)
+        const navLinks = navMenu.querySelectorAll('.submenu a');
         navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+                // Also close any open submenus
+                document.querySelectorAll('.has-submenu').forEach(item => {
+                    item.classList.remove('submenu-open');
+                });
+            });
+        });
+        
+        // Close menu when clicking on non-submenu links
+        const directNavLinks = navMenu.querySelectorAll(':scope > li > a:not(.submenu-toggle)');
+        directNavLinks.forEach(link => {
             link.addEventListener('click', function() {
                 hamburgerBtn.classList.remove('active');
                 navMenu.classList.remove('active');

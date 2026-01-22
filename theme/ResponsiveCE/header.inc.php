@@ -38,7 +38,17 @@
                 <ul class="nav-menu" id="navMenu">
                     <li class="<?php echo (return_page_slug() == 'index') ? 'mobile-only' : ''; ?>"><a href="<?php get_site_url(); ?>">Home</a></li>
                     <li><a href="<?php get_site_url(); ?>index.php?id=about">About</a></li>
-                    <li><a href="<?php get_site_url(); ?>index.php#services">Services</a></li>
+                    <li class="has-submenu">
+                        <a href="<?php get_site_url(); ?>index.php#services" class="submenu-toggle">Services</a>
+                        <ul class="submenu">
+                            <li><a href="<?php get_site_url(); ?>index.php#rites-of-passage">Rites of Passage</a></li>
+                            <li><a href="<?php get_site_url(); ?>index.php#cranio-sacral">Cranio-Sacral Therapy</a></li>
+                            <li><a href="<?php get_site_url(); ?>index.php#somatic-emotional">Somatic-Emotional Release</a></li>
+                            <li><a href="<?php get_site_url(); ?>index.php#shamanic-work">Shamanic Work</a></li>
+                            <li><a href="<?php get_site_url(); ?>index.php#dynamic-body">Dynamic Body Balancing</a></li>
+                            <li><a href="<?php get_site_url(); ?>index.php#reiki">Reiki</a></li>
+                        </ul>
+                    </li>
                     <li><a href="<?php get_site_url(); ?>index.php?id=forms">Forms</a></li>
                     <li><a href="<?php get_site_url(); ?>index.php?id=contact">Contact</a></li>
                 </ul>
