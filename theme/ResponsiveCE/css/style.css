@@ -84,13 +84,7 @@ body {
 }
 
 .logo-text {
-    display: none; /* Hide on desktop */
-}
-
-@media (max-width: 768px) {
-    .logo-text {
-        display: block; /* Show on mobile */
-    }
+    display: none; /* Hidden on all screens */
 }
 
 /* Hamburger Menu Button */
@@ -274,6 +268,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .hero-image-container {
         height: 400px;
     }
@@ -285,10 +280,12 @@ body {
     }
 
     .hero-title {
-        visibility: hidden;
-        font-size: 2.5rem;
+        visibility: visible;
+        font-size: 1.75rem;
         margin-left: 0;
         text-align: left;
+        margin-top: 80px;
+        margin-left: 10px;
     }
 }
 
