@@ -139,7 +139,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #3D562F;
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -227,7 +227,7 @@ body {
     font-size: 2.25rem;
     font-weight: 700;
     font-family: "Crimson Pro", serif;
-    color: #355b0b;
+    color: #3D562F;
     letter-spacing: 0.1em;
     margin-left: 7%;
     position: relative;
@@ -285,7 +285,7 @@ body {
 }
 
 .services-header {
-    background-color: #888;
+    background-color: #3D562F;
     padding: 0.1rem 0.3rem;
     text-align: center;
     margin: -40px auto 0;

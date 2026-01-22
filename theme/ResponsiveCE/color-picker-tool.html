@@ -1,0 +1,234 @@
+<!-- ============================================
+     LIVE COLOR PICKER TOOL
+     Reusable widget for testing CSS colors
+     ============================================ -->
+
+<style>
+.color-picker-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    font-family: monospace;
+    max-width: 300px;
+}
+
+.color-picker-widget h3 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+}
+
+.color-picker-widget label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.color-picker-widget input[type="text"],
+.color-picker-widget select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.color-picker-widget input[type="color"] {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.color-picker-widget .hex-display {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+}
+
+.color-picker-widget button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.color-picker-widget .copy-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.color-picker-widget .copy-btn:hover {
+    background-color: #45a049;
+}
+
+.color-picker-widget .close-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.color-picker-widget .close-btn:hover {
+    background-color: #da190b;
+}
+
+.color-picker-widget .reset-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.color-picker-widget .reset-btn:hover {
+    background-color: #0b7dda;
+}
+
+.color-picker-widget.hidden {
+    display: none;
+}
+</style>
+
+<div class="color-picker-widget" id="colorPickerWidget">
+    <h3>🎨 Live Color Picker</h3>
+    
+    <label for="cssSelector">CSS Selector:</label>
+    <input type="text" id="cssSelector" value=".services-header" placeholder=".services-header">
+    
+    <label for="cssProperty">CSS Property:</label>
+    <select id="cssProperty">
+        <option value="background-color">background-color</option>
+        <option value="color">color (text)</option>
+        <option value="border-color">border-color</option>
+    </select>
+    
+    <label for="colorPicker">Pick a Color:</label>
+    <input type="color" id="colorPicker" value="#888888">
+    
+    <div class="hex-display" id="hexDisplay">#888888</div>
+    
+    <button class="copy-btn" id="copyBtn">📋 Copy Hex Code</button>
+    <button class="reset-btn" id="resetBtn">🔄 Reset to Original</button>
+    <button class="close-btn" id="closeBtn">❌ Close Tool</button>
+</div>
+
+<script>
+(function() {
+    const widget = document.getElementById('colorPickerWidget');
+    const colorPicker = document.getElementById('colorPicker');
+    const hexDisplay = document.getElementById('hexDisplay');
+    const cssSelector = document.getElementById('cssSelector');
+    const cssProperty = document.getElementById('cssProperty');
+    const copyBtn = document.getElementById('copyBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    
+    let originalColors = {};
+    
+    // Function to get current elements and store original colors
+    function storeOriginalColor() {
+        const selector = cssSelector.value.trim();
+        if (!originalColors[selector]) {
+            const elements = document.querySelectorAll(selector);
+            if (elements.length > 0) {
+                const computedStyle = window.getComputedStyle(elements[0]);
+                const property = cssProperty.value;
+                originalColors[selector] = computedStyle[property];
+            }
+        }
+    }
+    
+    // Function to update color live
+    function updateColor() {
+        const color = colorPicker.value;
+        const selector = cssSelector.value.trim();
+        const property = cssProperty.value;
+        
+        if (!selector) return;
+        
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            element.style[property] = color;
+        });
+        
+        hexDisplay.textContent = color.toUpperCase();
+    }
+    
+    // Color picker change event
+    colorPicker.addEventListener('input', updateColor);
+    
+    // CSS selector or property change
+    cssSelector.addEventListener('change', function() {
+        storeOriginalColor();
+        updateColor();
+    });
+    
+    cssProperty.addEventListener('change', function() {
+        storeOriginalColor();
+        updateColor();
+    });
+    
+    // Copy hex code to clipboard
+    copyBtn.addEventListener('click', function() {
+        const hexCode = colorPicker.value;
+        navigator.clipboard.writeText(hexCode).then(() => {
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = '✅ Copied!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        });
+    });
+    
+    // Reset to original color
+    resetBtn.addEventListener('click', function() {
+        const selector = cssSelector.value.trim();
+        const property = cssProperty.value;
+        
+        if (originalColors[selector]) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                element.style[property] = originalColors[selector];
+            });
+            
+            // Try to set color picker to original (if it's a hex color)
+            const originalColor = originalColors[selector];
+            if (originalColor.startsWith('#')) {
+                colorPicker.value = originalColor;
+                hexDisplay.textContent = originalColor.toUpperCase();
+            }
+        }
+    });
+    
+    // Close button
+    closeBtn.addEventListener('click', function() {
+        widget.classList.add('hidden');
+    });
+    
+    // Store original color on load
+    window.addEventListener('load', function() {
+        storeOriginalColor();
+    });
+})();
+</script>
