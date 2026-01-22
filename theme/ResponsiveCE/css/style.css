@@ -139,6 +139,10 @@ body {
     margin: 0;
 }
 
+.nav-menu li.mobile-only {
+    display: none;
+}
+
 .nav-menu a {
     text-decoration: none;
     color: #143810;
@@ -186,10 +190,19 @@ body {
 
     .nav-menu li {
         margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .nav-menu li.mobile-only {
+        display: block;
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
     }
 
     .nav-menu a {
-        padding: 0.2rem;
+        padding: 1rem;
         color: #fff;
     }
     
