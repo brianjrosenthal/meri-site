@@ -81,7 +81,7 @@
         <section id="rites-of-passage" class="service-detail">
             <div class="service-detail-content">
                 <h2>Rites of Passage</h2>
-                <?php get_component('rites-of-passage-desc'); ?>
+                <?php get_html_component('rites-of-passage-desc'); ?>
             </div>
         </section>
         
@@ -89,7 +89,7 @@
         <section id="cranio-sacral" class="service-detail">
             <div class="service-detail-content">
                 <h2>Cranio-Sacral Therapy</h2>
-                <?php get_component('cranio-sacral-desc'); ?>
+                <?php get_html_component('cranio-sacral-desc'); ?>
             </div>
         </section>
         
@@ -97,7 +97,7 @@
         <section id="somatic-emotional" class="service-detail">
             <div class="service-detail-content">
                 <h2>Somatic-Emotional Release</h2>
-                <?php get_component('somatic-emotional-desc'); ?>
+                <?php get_html_component('somatic-emotional-desc'); ?>
             </div>
         </section>
         
@@ -105,7 +105,7 @@
         <section id="shamanic-work" class="service-detail">
             <div class="service-detail-content">
                 <h2>Shamanic Work</h2>
-                <?php get_component('shamanic-work-desc'); ?>
+                <?php get_html_component('shamanic-work-desc'); ?>
             </div>
         </section>
         
@@ -113,7 +113,7 @@
         <section id="dynamic-body" class="service-detail">
             <div class="service-detail-content">
                 <h2>Dynamic Body Balancing</h2>
-                <?php get_component('dynamic-body-desc'); ?>
+                <?php get_html_component('dynamic-body-desc'); ?>
             </div>
         </section>
         
@@ -121,7 +121,7 @@
         <section id="reiki" class="service-detail">
             <div class="service-detail-content">
                 <h2>Reiki</h2>
-                <?php get_component('reiki-desc'); ?>
+                <?php get_html_component('reiki-desc'); ?>
             </div>
         </section>
         
