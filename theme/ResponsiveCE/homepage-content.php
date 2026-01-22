@@ -81,25 +81,7 @@
         <section id="rites-of-passage" class="service-detail">
             <div class="service-detail-content">
                 <h2>Rites of Passage</h2>
-                <h3>Ceremony</h3>
-                <p>We pass through many of our life's transitions without properly honoring them. Moving through our moments of transformation leaves us feeling confused, empty and overwhelmed. Our lives can feel anti-climactic and critical moments not meaningfully incorporated into our inner tapestry.</p>
-                
-                <p>We will work with you to create meaningful ceremony for the important transformations in your life. We create ceremony around transitions such as:</p>
-                
-                <ul>
-                    <li>Traumatic Events (Working through and releasing)</li>
-                    <li>Entering or exiting a relationship</li>
-                    <li>Releasing parts of oneself that no longer serves</li>
-                    <li>Adopting or accepting parts of oneself</li>
-                    <li>Gender affirming transitions</li>
-                    <li>Personal, quiet acceptance or coming out of the closet as an LGBTQIA+ Person</li>
-                    <li>Moving into or leaving a home</li>
-                    <li>Miscarriage and Abortion</li>
-                    <li>Onset of Menses and Menopause</li>
-                    <li>Transformation of someone you love who is no longer in your life (Death / Marriage / Birth of Child)</li>
-                    <li>Adoption or loss of a pet</li>
-                    <li>Accepting your child's, parents, siblings, spouses, loved ones transitions, feelings, choices</li>
-                </ul>
+                <?php get_component('rites-of-passage-desc'); ?>
             </div>
         </section>
         
@@ -107,9 +89,7 @@
         <section id="cranio-sacral" class="service-detail">
             <div class="service-detail-content">
                 <h2>Cranio-Sacral Therapy</h2>
-                <p>Cranio Sacral Therapy is a gentle, hands on method of touch which enables the body to relax and self correct. Delicate manual techniques focused on the cranial bones, sacral bones and the cranio sacral fluid surrounding the brain and spinal cord to facilitate the release of restrictions throughout the body.</p>
-                
-                <p>Our practice may incorporate Dynamic Body Balancing which encourages Myofascial Unwinding which aims to release tension and improve flexibility in the fascia, the connective tissue that surrounds and supports muscles, organs and bones. A cranio sacral session is performed fully clothed on a massage table.</p>
+                <?php get_component('cranio-sacral-desc'); ?>
             </div>
         </section>
         
@@ -117,7 +97,7 @@
         <section id="somatic-emotional" class="service-detail">
             <div class="service-detail-content">
                 <h2>Somatic-Emotional Release</h2>
-                <p>SomatoEmotional Release (SER) invites the release of the residual effects of trauma and stress stored in the body. During a session gentle guidance is provided through therapeutic touch, dialogue, and guided imagery to release physical and emotional tension stored in the body. Clients are invited to build resilience through deepening connection with their inner self. We offer the opportunity to incorporate ancient shamanic work to build resilience as we move through trauma in SER work.</p>
+                <?php get_component('somatic-emotional-desc'); ?>
             </div>
         </section>
         
@@ -125,12 +105,7 @@
         <section id="shamanic-work" class="service-detail">
             <div class="service-detail-content">
                 <h2>Shamanic Work</h2>
-                <p>Core Shamanism, developed by Dr. Michael Harner, is a modern approach to ancient Shamanic wisdom – a pathway that bridges traditional spiritual practices and contemporary life. Rooted in the universal and near universal principles found in indigenous, shamanic traditions around the world, core shamanism teaches how to safely and respectfully access the realms of spirit for healing guidance and personal transformation. Through rhythmic, drumming, focused intention and shamanic journeying we develop our resilience, inner power and a sense of wholeness.</p>
-                
-                <h3>Meri's Approach</h3>
-                <p>Meri has developed a method of introducing clients to the shamanic journeying process through a practical and deeply meaningful step by step approach. Such approach is accessible privately and in a group format. Once the skillset of the shamanic journey is mastered, clients who are interested will receive gentle guidance and powerful support as they delve into core shamanic healing.</p>
-                
-                <p>While some Shamanic work utilizes plant medicine, a requirement of my practice and core shamanism is that we explore without any mind altering substances.</p>
+                <?php get_component('shamanic-work-desc'); ?>
             </div>
         </section>
         
@@ -138,7 +113,7 @@
         <section id="dynamic-body" class="service-detail">
             <div class="service-detail-content">
                 <h2>Dynamic Body Balancing</h2>
-                <p>Information about Dynamic Body Balancing will be available soon. This healing modality works in conjunction with our other services to provide comprehensive care and support for your healing journey.</p>
+                <?php get_component('dynamic-body-desc'); ?>
             </div>
         </section>
         
@@ -146,7 +121,7 @@
         <section id="reiki" class="service-detail">
             <div class="service-detail-content">
                 <h2>Reiki</h2>
-                <p>Reiki is a gentle, holistic healing practice that originated in Japan. The word Reiki comes from the Japanese words, "Rei", meaning universal and "Ki" meaning life energy. Reiki works by channeling this universal energy through the practitioners, hands to promote balance, relaxation and healing in the body mind and spirit. This energy based therapy encourages the natural flow of life force within, helping to reduce stress, relieve tension and support overall well-being. In our practice Reiki is incorporated into cranio sacral therapy work when appropriate.</p>
+                <?php get_component('reiki-desc'); ?>
             </div>
         </section>
         

@@ -2,9 +2,9 @@
 <?php include('header.inc.php'); ?>
 
 				<?php 
-				// Homepage content is now stored in an external HTML file for easier editing
-				// No need to deal with XML escaping anymore!
-				include('homepage-content.html'); 
+				// Homepage content is now stored in an external PHP file with editable components
+				// Service descriptions can be edited in the admin panel under Components
+				include('homepage-content.php'); 
 				?>
 
 <?php include('footer.inc.php'); ?>
