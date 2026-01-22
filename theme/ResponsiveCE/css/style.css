@@ -726,3 +726,22 @@ body {
         display: block;
     }
 }
+
+/* ========================================
+   BREADCRUMB STYLING
+   ======================================== */
+
+nav[aria-label="breadcrumb"] a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav[aria-label="breadcrumb"] a:hover {
+    color: #143810;
+    text-decoration: underline;
+}
+
+nav[aria-label="breadcrumb"] a[aria-current] {
+    color: #143810;
+    font-weight: 600;
+}
