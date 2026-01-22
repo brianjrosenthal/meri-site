@@ -377,7 +377,7 @@ body {
 
     .hero-title {
         visibility: visible;
-        font-size: 1.75rem;
+        font-size: 24px;
         margin-left: 0;
         text-align: left;
         margin-top: 80px;
@@ -391,7 +391,8 @@ body {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 20px;
+        margin-top: 50px;
     }
 }
 
