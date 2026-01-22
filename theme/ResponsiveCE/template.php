@@ -11,10 +11,6 @@
 		}; ?>
 		">
 			<main class="content-main">
-
-				<hgroup class="content-title">
-					<h1><?php get_page_title(); ?></h1>
-
 					<nav aria-label="breadcrumb">
 
 						<ul>
@@ -23,14 +19,14 @@
 						</ul>
 
 					</nav>
+
+				<hgroup class="content-title">
+					<h1><?php get_page_title(); ?></h1>
+
 				</hgroup>
  
 				<?php get_page_content(); ?>
 			</main>
-			<aside class="content-sidebar">
-				<?php get_component('sidebar'); ?>
-				<?php get_component('tagline'); ?>
-			</aside>
 
 		</div>
 	</div>

@@ -27,11 +27,6 @@
  
 				<?php get_page_content(); ?>
 			</main>
-			<aside class="content-sidebar">
-				<?php get_component('sidebar'); ?>
-				<?php get_component('tagline'); ?>
-			</aside>
-
 		</div>
 	</div>
 </section>

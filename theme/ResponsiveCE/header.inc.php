@@ -36,7 +36,7 @@
                 </button>
 
                 <ul class="nav-menu" id="navMenu">
-                    <li class="mobile-only"><a href="<?php get_site_url(); ?>">Home</a></li>
+                    <li class="<?php echo (return_page_slug() == 'index') ? 'mobile-only' : ''; ?>"><a href="<?php get_site_url(); ?>">Home</a></li>
                     <li><a href="<?php get_site_url(); ?>index.php?id=about">About</a></li>
                     <li><a href="<?php get_site_url(); ?>index.php#services">Services</a></li>
                     <li><a href="<?php get_site_url(); ?>index.php?id=forms">Forms</a></li>
