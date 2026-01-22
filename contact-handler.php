@@ -51,63 +51,28 @@ if (!empty($errors)) {
     exit;
 }
 
-// Check if PHPMailer is available
-$phpMailerPath = __DIR__ . '/admin/inc/PHPMailer';
-$usePHPMailer = file_exists($phpMailerPath . '/PHPMailer.php');
-
-// Load PHPMailer classes if available
-if ($usePHPMailer) {
-    require_once($phpMailerPath . '/PHPMailer.php');
-    require_once($phpMailerPath . '/SMTP.php');
-    require_once($phpMailerPath . '/Exception.php');
-}
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+// Load custom SMTP mailer
+require_once(__DIR__ . '/includes/smtp-mailer.php');
 
 $success = false;
 $errorMessage = '';
 
-if (defined('SMTP_ENABLED') && SMTP_ENABLED && $usePHPMailer) {
-    // Use PHPMailer with SMTP
+// Try to send via custom SMTP mailer
+if (defined('SMTP_ENABLED') && SMTP_ENABLED) {
+    $to = defined('CONTACT_EMAIL') ? CONTACT_EMAIL : 'brian.rosenthal@gmail.com';
+    $subject = 'New Contact Form Submission from ' . $name;
+    $body = "New Contact Form Submission\n\n" .
+            "Name: $name\n" .
+            "Email: $email\n" .
+            "Message:\n$message";
     
-    $mail = new PHPMailer(true);
+    $result = sendSMTPEmail($to, $subject, $body, $email);
     
-    try {
-        // Server settings
-        $mail->isSMTP();
-        $mail->Host = SMTP_HOST;
-        $mail->SMTPAuth = true;
-        $mail->Username = SMTP_USERNAME;
-        $mail->Password = SMTP_PASSWORD;
-        $mail->SMTPSecure = SMTP_SECURE;
-        $mail->Port = SMTP_PORT;
-        
-        // Recipients
-        $mail->setFrom(SMTP_FROM_EMAIL, SMTP_FROM_NAME);
-        $mail->addAddress(CONTACT_EMAIL);
-        $mail->addReplyTo($email, $name);
-        
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission from ' . $name;
-        $mail->Body = "
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
-            <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
-            <p><strong>Message:</strong></p>
-            <p>" . nl2br(htmlspecialchars($message)) . "</p>
-        ";
-        $mail->AltBody = "New Contact Form Submission\n\n" .
-                        "Name: $name\n" .
-                        "Email: $email\n" .
-                        "Message:\n$message";
-        
-        $mail->send();
+    if ($result['success']) {
         $success = true;
-    } catch (Exception $e) {
-        $errorMessage = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        error_log("Contact form error: " . $mail->ErrorInfo);
+    } else {
+        $errorMessage = "Failed to send email: " . $result['error'];
+        error_log("Contact form SMTP error: " . $result['error']);
     }
 } else {
     // Fallback to PHP mail() function
@@ -124,7 +89,7 @@ if (defined('SMTP_ENABLED') && SMTP_ENABLED && $usePHPMailer) {
     if (mail($to, $subject, $body, $headers)) {
         $success = true;
     } else {
-        $errorMessage = "Failed to send email. Please try again later.";
+        $errorMessage = "Failed to send email. SMTP is not configured and PHP mail() failed.";
         error_log("Contact form error: mail() function failed");
     }
 }
@@ -134,8 +99,17 @@ if ($success) {
     $_SESSION['contact_success'] = true;
     header('Location: index.php?id=contact&success=1');
 } else {
+    // Make sure we have an error message
+    if (empty($errorMessage)) {
+        $errorMessage = "Unknown error occurred. Please check server logs.";
+    }
     $_SESSION['contact_error'] = $errorMessage;
     $_SESSION['contact_data'] = $_POST;
+    
+    // Also log to PHP error log for debugging
+    error_log("Contact Form Error: " . $errorMessage);
+    error_log("SMTP_ENABLED: " . (defined('SMTP_ENABLED') ? (SMTP_ENABLED ? 'true' : 'false') : 'not defined'));
+    
     header('Location: index.php?id=contact&error=send');
 }
 exit;

@@ -12,10 +12,11 @@ if (isset($_GET['success']) && $_GET['success'] == '1') {
 // Display error messages
 if (isset($_GET['error'])) {
     echo '<div class="alert alert-error">';
-    if (isset($_SESSION['contact_error'])) {
-        echo htmlspecialchars($_SESSION['contact_error']);
+    if (isset($_SESSION['contact_error']) && !empty($_SESSION['contact_error'])) {
+        echo '<strong>Error:</strong> ' . htmlspecialchars($_SESSION['contact_error']);
         unset($_SESSION['contact_error']);
     } elseif (isset($_SESSION['contact_errors'])) {
+        echo '<strong>Please fix the following errors:</strong>';
         echo '<ul>';
         foreach ($_SESSION['contact_errors'] as $error) {
             echo '<li>' . htmlspecialchars($error) . '</li>';
@@ -23,7 +24,7 @@ if (isset($_GET['error'])) {
         echo '</ul>';
         unset($_SESSION['contact_errors']);
     } else {
-        echo 'There was an error sending your message. Please try again.';
+        echo '<strong>Error:</strong> There was an error sending your message. Please check your configuration or try again later.';
     }
     echo '</div>';
 }

@@ -56,6 +56,14 @@ if (basename($_SERVER['PHP_SELF']) == 'config.dev.php') {
 define('CONTACT_EMAIL', 'brian.rosenthal@gmail.com');
 
 /**
+ * CONTACT FORM BCC EMAIL (Optional)
+ * 
+ * BCC email address for contact form submissions (useful for testing/monitoring)
+ * Leave empty or comment out if not needed
+ */
+define('CONTACT_BCC', 'brian.rosenthal@gmail.com'); // Temporary for testing
+
+/**
  * SMTP CONFIGURATION
  * 
  * Configure SMTP settings for sending emails.
