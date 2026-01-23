@@ -36,9 +36,9 @@
             
             <a href="#somatic-emotional" class="service-card">
                 <div class="service-image">
-                    <img src="/data/uploads/somatic_emotional_release.png" alt="Somatic-Emotional Release">
+                    <img src="/data/uploads/jumping.png" alt="Somatic-Emotional Release">
                     <div class="service-title-overlay">
-                        <h3>Somatic-Emotional Release</h3>
+                        <h3 style="font-size: ">Somatic-Emotional Release</h3>
                     </div>
                 </div>
             </a>
@@ -54,7 +54,7 @@
             
             <a href="#dynamic-body" class="service-card">
                 <div class="service-image">
-                    <img src="/data/uploads/dynamic_body_rebalancing_square.png" alt="Dynamic Body Balancing">
+                    <img src="/data/uploads/dynamic_body_rebalancing5.png" alt="Dynamic Body Balancing">
                     <div class="service-title-overlay">
                         <h3>Dynamic Body Balancing</h3>
                     </div>
@@ -63,7 +63,7 @@
             
             <a href="#reiki" class="service-card">
                 <div class="service-image">
-                    <img src="/data/uploads/reiki.png" alt="Reiki">
+                    <img src="/data/uploads/somatic_emotional_release.png" alt="Reiki">
                     <div class="service-title-overlay">
                         <h3>Reiki</h3>
                     </div>
