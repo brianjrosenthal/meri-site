@@ -4,6 +4,8 @@
 .env
 /.vscode/*.log
 /logs/
+*.bak
+/backups/
 
 # Development configuration override
 config.dev.php
