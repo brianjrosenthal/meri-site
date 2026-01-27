@@ -22,9 +22,9 @@
 
 <body>
 
-    <header class="site-header">
+    <header class="site-header" role="banner">
         <div class="header-container">
-            <nav class="header-nav">
+            <nav class="header-nav" role="navigation" aria-label="Main navigation">
                 <a class="site-logo" href="<?php get_site_url(); ?>">
                     <span class="logo-text">Rites of Passage</span>
                 </a>

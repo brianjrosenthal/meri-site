@@ -1,9 +1,10 @@
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-image-container">
-        <img src="/data/uploads/hero_image.png" alt="Peaceful landscape" class="hero-image">
+        <img src="/data/uploads/hero_image.png" alt="Peaceful landscape with grassy hillside, stream, and grazing sheep under cloudy s
+ky" class="hero-image">
         <div class="hero-overlay">
-            <h1 class="hero-title">RITES OF PASSAGE</h1>
+            <h1 id="hero-title" class="hero-title">RITES OF PASSAGE</h1>
         </div>
     </div>
 </section>
@@ -16,54 +17,54 @@
     
     <div class="container services-container">
         <div class="services-grid">
-            <a href="#rites-of-passage" class="service-card">
+            <a href="#rites-of-passage" class="service-card" aria-label="Learn more about Rites of Passage ceremony services">
                 <div class="service-image">
-                    <img src="/data/uploads/rites_of_passage_sheep_square.png" alt="Rites of Passage">
+                    <img src="/data/uploads/rites_of_passage_sheep_square.png" alt="" role="presentation">
                     <div class="service-title-overlay">
                         <h3>Rites of Passage</h3>
                     </div>
                 </div>
             </a>
             
-            <a href="#cranio-sacral" class="service-card">
+            <a href="#cranio-sacral" class="service-card" aria-label="Learn more about Cranio-Sacral Therapy">
                 <div class="service-image">
-                    <img src="/data/uploads/cranio_sacral_therapy_square.png" alt="Cranio-Sacral Therapy">
+                    <img src="/data/uploads/cranio_sacral_therapy_square.png" role="presentation">
                     <div class="service-title-overlay">
                         <h3>Cranio-Sacral Therapy</h3>
                     </div>
                 </div>
             </a>
             
-            <a href="#somatic-emotional" class="service-card">
+            <a href="#somatic-emotional" class="service-card" aria-label="Learn more about Somatic-Emotional Release therapy">
                 <div class="service-image">
-                    <img src="/data/uploads/jumping.png" alt="Somatic-Emotional Release">
+                    <img src="/data/uploads/jumping.png" role="presentation">
                     <div class="service-title-overlay">
                         <h3 style="font-size: ">Somatic-Emotional Release</h3>
                     </div>
                 </div>
             </a>
             
-            <a href="#shamanic-work" class="service-card">
+            <a href="#shamanic-work" class="service-card" aria-label="Learn more about Shamanic Work and core shamanism">
                 <div class="service-image">
-                    <img src="/data/uploads/fire_without_marshmallows.jpeg" alt="Shamanic Work">
+                    <img src="/data/uploads/fire_without_marshmallows.jpeg" role="presentation">
                     <div class="service-title-overlay">
                         <h3>Shamanic Work</h3>
                     </div>
                 </div>
             </a>
             
-            <a href="#dynamic-body" class="service-card">
+            <a href="#dynamic-body" class="service-card" aria-label="Learn more about Dynamic Body Balancing">
                 <div class="service-image">
-                    <img src="/data/uploads/dynamic_body_rebalancing5.png" alt="Dynamic Body Balancing">
+                    <img src="/data/uploads/dynamic_body_rebalancing5.png" role="presentation">
                     <div class="service-title-overlay">
                         <h3>Dynamic Body Balancing</h3>
                     </div>
                 </div>
             </a>
             
-            <a href="#reiki" class="service-card">
+            <a href="#reiki" class="service-card" aria-label="Learn more about Reiki healing practice">
                 <div class="service-image">
-                    <img src="/data/uploads/somatic_emotional_release.png" alt="Reiki">
+                    <img src="/data/uploads/somatic_emotional_release.png" role="presentation">
                     <div class="service-title-overlay">
                         <h3>Reiki</h3>
                     </div>
