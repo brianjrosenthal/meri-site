@@ -43,6 +43,47 @@ if (empty($message)) {
     $errors[] = 'Message is required';
 }
 
+// Verify reCAPTCHA if configured
+if (defined('RECAPTCHA_SECRET_KEY') && !empty(RECAPTCHA_SECRET_KEY)) {
+    $recaptchaResponse = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
+    
+    if (empty($recaptchaResponse)) {
+        $errors[] = 'Please complete the reCAPTCHA verification';
+    } else {
+        // Verify with Google
+        $verifyURL = 'https://www.google.com/recaptcha/api/siteverify';
+        $postData = [
+            'secret' => RECAPTCHA_SECRET_KEY,
+            'response' => $recaptchaResponse,
+            'remoteip' => $_SERVER['REMOTE_ADDR']
+        ];
+        
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $verifyURL);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        
+        $response = curl_exec($ch);
+        $curlError = curl_error($ch);
+        curl_close($ch);
+        
+        if ($response === false) {
+            error_log("reCAPTCHA verification failed: cURL error - " . $curlError);
+            $errors[] = 'reCAPTCHA verification failed. Please try again.';
+        } else {
+            $responseData = json_decode($response, true);
+            
+            if (!isset($responseData['success']) || $responseData['success'] !== true) {
+                $errorCodes = isset($responseData['error-codes']) ? implode(', ', $responseData['error-codes']) : 'unknown';
+                error_log("reCAPTCHA verification failed: " . $errorCodes);
+                $errors[] = 'reCAPTCHA verification failed. Please try again.';
+            }
+        }
+    }
+}
+
 // If validation fails, redirect back with error
 if (!empty($errors)) {
     $_SESSION['contact_errors'] = $errors;

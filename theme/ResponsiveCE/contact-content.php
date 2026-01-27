@@ -1,6 +1,16 @@
 <h2>Contact Meredith Madon</h2>
 
 <?php
+// Load reCAPTCHA site key
+$recaptchaSiteKey = defined('RECAPTCHA_SITE_KEY') ? RECAPTCHA_SITE_KEY : '';
+?>
+
+<!-- Load reCAPTCHA API -->
+<?php if (!empty($recaptchaSiteKey)): ?>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<?php endif; ?>
+
+<?php
 // Display success message
 if (isset($_GET['success']) && $_GET['success'] == '1') {
     echo '<div class="alert alert-success">Thank you for your message! Meredith will respond within a few business days.</div>';
@@ -53,6 +63,12 @@ if (isset($_SESSION['contact_data'])) {
         <label for="message">Message</label>
         <textarea id="message" name="message" required><?php echo $savedMessage; ?></textarea>
     </div>
+    
+    <?php if (!empty($recaptchaSiteKey)): ?>
+    <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="<?php echo htmlspecialchars($recaptchaSiteKey); ?>"></div>
+    </div>
+    <?php endif; ?>
     
     <button type="submit" class="submit-btn">Send Message</button>
     

@@ -81,4 +81,16 @@ define('SMTP_PASSWORD', 'your-app-password-here'); // Your Gmail app password
 define('SMTP_FROM_EMAIL', 'your-email@gmail.com'); // From address
 define('SMTP_FROM_NAME', 'Rites of Passage Contact Form'); // From name
 
+/**
+ * RECAPTCHA CONFIGURATION
+ * 
+ * Google reCAPTCHA v2 settings for contact form spam protection.
+ * Get your keys at: https://www.google.com/recaptcha/admin/create
+ * 
+ * Site Key: Public key used in the HTML form
+ * Secret Key: Private key used for server-side verification
+ */
+define('RECAPTCHA_SITE_KEY', 'YOUR_KEY');
+define('RECAPTCHA_SECRET_KEY', 'YOUR_SECRET_KEY');
+
 ?>
