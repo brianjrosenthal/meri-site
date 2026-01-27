@@ -1,3 +1,4 @@
+<main>
 <!-- Hero Section -->
 <section class="hero-section" aria-labelledby="hero-title">
     <div class="hero-image-container">
@@ -128,6 +129,7 @@ ky" class="hero-image">
         
     </div>
 </div>
+</main>
 
 <!-- TEMP: Color Picker Tool - Remove this line when done -->
 <? // php include(GSDATAOTHERPATH.'../../theme/ResponsiveCE/color-picker-tool.html'); 

@@ -42,6 +42,21 @@ a.skip-link:focus {
     top: 0;
 }
 
+/* ========================================
+   MAIN ELEMENT RESET (Accessibility)
+   ======================================== */
+
+main,
+body > main {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    width: auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
