@@ -8,7 +8,7 @@
  *****************************************************/
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
     <header class="site-header" role="banner">
         <div class="header-container">
             <nav class="header-nav" role="navigation" aria-label="Main navigation">
-                <a class="site-logo" href="<?php get_site_url(); ?>">
+                <a class="site-logo" href="<?php get_site_url(); ?>" aria-label="Rites of Passage Logo going back to the homepage.">
                     <span class="logo-text">Rites of Passage</span>
                 </a>
 
