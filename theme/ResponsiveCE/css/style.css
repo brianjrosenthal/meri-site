@@ -514,6 +514,9 @@ body {
         padding: 40px 20px;
     }
 
+    .services-header {
+        max-width: 180px;
+    }
     .services-header h2 {
         font-size: 1.5rem;
     }
